@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: rgb(255, 145, 0);
+// $info: black;
+$warning: rgb(255, 145, 0);
 
 /* Importing Bootstrap SCSS file. */
 @import "./node_modules/bootstrap/scss/bootstrap";
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+label.xng-breadcrumb-trail {
+    color: rgb(255, 145, 0);
+}

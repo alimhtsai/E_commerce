@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="types.length > 0 && brands.length > 0">
         <section class="col-3">
             <h5 class="text-warning ms-3">Sort</h5>
             <select class="form-select mb-4" (change)="onSortSelected($event)">
@@ -9,7 +9,7 @@
             </select>
             <h5 class="text-warning ms-3">Brands</h5>
             <ul class="list-group my-3">
-                <li class="list-group-item" 
+                <li class="list-group-item d-flex justify-content-between align-items-center" 
                     *ngFor="let brand of brands"
                     [class.active]="brand.id === shopParams.brandId"
                     [value]="brand.id"
@@ -18,7 +18,7 @@
             </ul>
             <h5 class="text-warning ms-3">Types</h5>
             <ul class="list-group my-3">
-                <li class="list-group-item" 
+                <li class="list-group-item d-flex justify-content-between align-items-center" 
                     *ngFor="let type of types"
                     [class.active]="type.id === shopParams.typeId"
                     [value]="type.id"
@@ -28,7 +28,7 @@
             
         </section>
         <section class="col-9">
-            <div class="d-flex justify-content-between align-items-center pb-2">
+            <div class="d-flex justify-content-between align-items-center pb-2 mb-2">
                 <app-paging-header
                     [totalCount]="totalCount"
                     [pageNumber]="shopParams.pageNumber"

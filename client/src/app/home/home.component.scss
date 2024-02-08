@@ -1,0 +1,24 @@
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.featured {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
