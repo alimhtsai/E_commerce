@@ -21,6 +21,7 @@
     "@angular/router": "^17.1.2",
     "bootstrap": "^5.2.3",
     "bootswatch": "^5.3.2",
+    "cuid": "^3.0.0",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^10.3.0",
     "ngx-spinner": "^16.0.2",
