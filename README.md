@@ -1,7 +1,7 @@
 ## E-Commerce Shopping Website 
+> C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker
 
 ### Introduction
-<b>Tech Stacks: C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker</b>
 * Applied generic repository in C#/ .NET Core backend
 * Used ASP.NET Identity and JWT for user registration and login
 * Developed sorting, paging, searching, and routing using TypeScript/ Angular in frontend
