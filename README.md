@@ -15,7 +15,7 @@ https://github.com/alimhtsai/skinet/assets/48788292/eb2f8323-cd26-4a30-b521-95c5
 ### Local build for MacOS
 <b>Step 1. Clone the GitHub project to the local directory</b>
 
-`https://github.com/alimhtsai/skinet.git`
+`git clone https://github.com/alimhtsai/E_commerce.git`
 
 <b>Step 2. Start backend</b>
 1. Go to the `API` folder.
