@@ -2,7 +2,7 @@
 > C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker
 
 ### Introduction
-* Applied the repository and unit of work patterns in C#/ .NET Core backend
+* Applied [the repository and unit of work patterns](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) in C#/ .NET Core backend
 * Used ASP.NET Identity and JWT for user registration and login
 * Developed sorting, paging, searching, and routing using TypeScript/ Angular in frontend
 * Built basket feature with Redis in-memory storage and Docker
@@ -14,7 +14,7 @@ https://github.com/alimhtsai/skinet/assets/48788292/eb2f8323-cd26-4a30-b521-95c5
 
 ### Project Structure
 
-<img width="1000" alt="Screen Shot 2024-05-19 at 12 05 14 PM" src="https://github.com/alimhtsai/E_commerce/assets/48788292/9fdc0497-b577-4f18-8b06-59601ae26524">
+<img width="1000" alt="Screen Shot 2024-05-19 at 4 45 34 PM" src="https://github.com/alimhtsai/E_commerce/assets/48788292/1188d7de-715e-412c-bb64-92aba618458d">
 
 ```
 ..
