@@ -2,15 +2,91 @@
 > C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker
 
 ### Introduction
-* Applied generic repository in C#/ .NET Core backend
+* Applied the repository and unit of work patterns in C#/ .NET Core backend
 * Used ASP.NET Identity and JWT for user registration and login
 * Developed sorting, paging, searching, and routing using TypeScript/ Angular in frontend
 * Built basket feature with Redis in-memory storage and Docker
-* Reference: https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/
+<!--- Reference: https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/ --->
 
 https://github.com/alimhtsai/skinet/assets/48788292/eb2f8323-cd26-4a30-b521-95c5edb0c6ab
 
 ----
+
+### Project Structure
+
+<img width="1000" alt="Screen Shot 2024-05-19 at 12 05 14 PM" src="https://github.com/alimhtsai/E_commerce/assets/48788292/9fdc0497-b577-4f18-8b06-59601ae26524">
+
+```
+..
+├── API                
+           ├── Controllers
+                              ├── AccountController.cs
+                              ├── BaseApiController.cs
+                              ├── BasketController.cs
+                              ├── BuggyController.cs
+                              ├── ErrorController.cs
+                              ├── OrdersController.cs
+                              ├── ProductsController.cs
+           ├── Dtos
+           ├── Errors
+           ├── Extensions
+           ├── Helpers
+           ├── MiddleWare
+           ├── Properties
+           ├── program.cs                       # Entry point of the back-end application
+           ├── appsettings.Development.json     # Use only for development stage
+
+├── Core
+           ├── Entities
+                              ├── Identity
+                                                      ├── Address.cs
+                                                      ├── AppUser.cs
+                              ├── OrderAggregate
+                                                      ├── Address.cs
+                                                      ├── DeliveryMethod.cs
+                                                      ├── Order.cs
+                                                      ├── OrderItem.cs
+                                                      ├── OrderStatus.cs
+                                                      ├── ProductItemOrdered.cs
+                              ├── BasketItem.cs
+                              ├── CustomerBasket.cs
+                              ├── Product.cs
+                              ├── ProductBrand.cs
+                              ├── ProductType.cs
+           ├── Interfaces
+                              ├── IBasketRepository.cs
+                              ├── IGenericRepository.cs
+                              ├── IOrderService.cs
+                              ├── IProductRepository.cs
+                              ├── ITokenService.cs
+                              ├── IUnitOfWork.cs
+           ├── Specifications
+
+├── Infrastructure
+           ├── Data
+                              ├── BasketRepository.cs
+                              ├── GenericRepository.cs
+                              ├── ProductRepository.cs
+                              ├── SpecificationEvaluator.cs
+                              ├── StoreContext.cs
+                              ├── StoreContextSeed.cs
+                              ├── UnitOfWork.cs
+           ├── Identity
+           ├── Services
+                              ├── OrderSercive.cs
+                              ├── TokenService.cs
+
+├── client
+           ├── src
+                              ├── app
+                                                      ├── account
+                                                      ├── basket
+                                                      ├── checkout
+                                                      ├── home
+                                                      ├── shared
+                                                      ├── shop
+```
+
 
 ### Local build for MacOS
 <b>Step 1. Clone the GitHub project to the local directory</b>
@@ -31,6 +107,7 @@ info: Microsoft.Hosting.Lifetime[0]
 info: Microsoft.Hosting.Lifetime[0]
       Content root path: .../skinet/API
 ```
+4. Open [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html) to see Swagger API.
 
 <b>Step 3. Start frontend</b>
 1. Go to the `client` folder.
