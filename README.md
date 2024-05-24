@@ -8,7 +8,14 @@
 * Built basket feature with Redis in-memory storage and Docker
 <!--- Reference: https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/ --->
 
+### Live Demo
+From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
+
 https://github.com/alimhtsai/skinet/assets/48788292/eb2f8323-cd26-4a30-b521-95c5edb0c6ab
+
+From basket to checkout, users can save a default address, choose their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket will automatically be emptied.
+
+https://github.com/alimhtsai/E_commerce/assets/48788292/144ace72-0384-4121-b8da-f00eced77d4c
 
 ----
 
