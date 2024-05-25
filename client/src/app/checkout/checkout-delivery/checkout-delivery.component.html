@@ -21,7 +21,7 @@
     <button class="btn btn-outline-primary" cdkStepperPrevious>
         <i class="fa fa-angle-left"></i> Back to Address
     </button>
-    <button class="btn btn-primary" cdkStepperNext>
+    <button class="btn btn-primary" cdkStepperNext [disabled]="!isDeliveryMethodSelected">
         Go to Review <i class="fa fa-angle-right"></i> 
     </button>
 </div>
