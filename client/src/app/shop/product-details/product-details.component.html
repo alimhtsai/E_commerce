@@ -10,10 +10,16 @@
                 You have {{quantityInBasket}} of this item in your basket
             </h5>
             <div class="d-flex justify-content-start align-items-center">
-                <i 
-                    (click)="decrementQuantity()"
-                    class="fa fa-minus-circle text-primary me-2" 
-                    style="cursor: pointer; font-size: 2em;"></i>
+                <ng-container *ngIf="quantity > 0; else disabledIcon">
+                    <i 
+                        (click)="decrementQuantity()"
+                        class="fa fa-minus-circle text-primary me-2" 
+                        style="cursor: pointer; font-size: 2em;"
+                    ></i>
+                </ng-container>
+                <ng-template #disabledIcon>
+                    <i class="fa fa-minus-circle text-muted me-2" style="font-size: 2em;"></i>
+                </ng-template>
                 <span class="font-weight-bold" style="font-size: 1.5em;">
                     {{quantity}}
                 </span>
