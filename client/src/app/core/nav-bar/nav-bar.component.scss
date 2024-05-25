@@ -6,8 +6,9 @@
     background: rgb(255, 145, 0);
     color: white;
     text-align: center;
-    top: -12px;
-    right: 32px;
+    top: 2px;   /* Adjust to vertically center the number next to the text */
+    right: -30px; /* Adjust this value based on your design */
+    line-height: 25px; /* Ensures the text is centered within the circle */
 }
 
 a {
