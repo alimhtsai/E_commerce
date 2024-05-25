@@ -2,20 +2,19 @@
 > C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker
 
 ### Introduction
-* Applied [the repository and unit of work patterns](https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) in C#/ .NET Core backend
+* Applied the repository, unit of work, and specification pattern in C#/ .NET Core backend to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
 * Used ASP.NET Identity and JWT for user registration and login
-* Developed sorting, paging, searching, and routing using TypeScript/ Angular in frontend
 * Built basket feature with Redis in-memory storage and Docker
-<!--- Reference: https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/ --->
+* Developed pagination, sorting, searching, and filtering features in frontend using TypeScript, Angular, and Bootstrap
 
 ### Live Demo
 From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/c9292332-2219-453d-bc3e-cb2cc03d2c9f
+https://github.com/alimhtsai/E_commerce/assets/48788292/e2dbf0f5-f539-48b4-9fd6-07900b6a2fc1
 
 From basket to checkout, users can save a default address, choose their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket is automatically emptied. Users can also view specific orders or review all their previous orders.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/8fe08af2-0417-430e-8644-fa07f2229265
+https://github.com/alimhtsai/E_commerce/assets/48788292/a445c7d4-6394-4e3b-bf2a-aa608e404a77
 
 ----
 
