@@ -11,11 +11,42 @@
 ### Live Demo
 From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
 
-https://github.com/alimhtsai/skinet/assets/48788292/eb2f8323-cd26-4a30-b521-95c5edb0c6ab
+https://github.com/alimhtsai/E_commerce/assets/48788292/c9292332-2219-453d-bc3e-cb2cc03d2c9f
 
-From basket to checkout, users can save a default address, choose their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket will automatically be emptied.
+From basket to checkout, users can save a default address, choose their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket is automatically emptied. Users can also view specific orders or review all their previous orders.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/144ace72-0384-4121-b8da-f00eced77d4c
+https://github.com/alimhtsai/E_commerce/assets/48788292/8fe08af2-0417-430e-8644-fa07f2229265
+
+----
+
+### Local build
+<b>Step 1. Clone the GitHub project to the local directory</b>
+
+`git clone https://github.com/alimhtsai/E_commerce.git`
+
+<b>Step 2. Start backend</b>
+1. Go to the `API` folder.
+2. Run `dotnet watch` in the terminal.
+3. If the backend runs successfully, the terminal should show messages like this:
+```shell
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://localhost:5001
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: .../skinet/API
+```
+4. Open [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html) to see Swagger API.
+
+<b>Step 3. Start Docker to use Redis in-memory storage for the basket</b>
+1. Run `docker-compose up` in the terminal.
+
+<b>Step 4. Start frontend</b>
+1. Go to the `client` folder.
+2. Run `ng serve` in the terminal.
+3. Open [https://localhost:4200](https://localhost:4200/)
 
 ----
 
@@ -93,32 +124,5 @@ https://github.com/alimhtsai/E_commerce/assets/48788292/144ace72-0384-4121-b8da-
                                                       ├── shared
                                                       ├── shop
 ```
-
-
-### Local build for MacOS
-<b>Step 1. Clone the GitHub project to the local directory</b>
-
-`git clone https://github.com/alimhtsai/E_commerce.git`
-
-<b>Step 2. Start backend</b>
-1. Go to the `API` folder.
-2. Run `dotnet watch` in the terminal.
-3. If the backend runs successfully, the terminal should show messages like this:
-```shell
-info: Microsoft.Hosting.Lifetime[14]
-      Now listening on: https://localhost:5001
-info: Microsoft.Hosting.Lifetime[0]
-      Application started. Press Ctrl+C to shut down.
-info: Microsoft.Hosting.Lifetime[0]
-      Hosting environment: Development
-info: Microsoft.Hosting.Lifetime[0]
-      Content root path: .../skinet/API
-```
-4. Open [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html) to see Swagger API.
-
-<b>Step 3. Start frontend</b>
-1. Go to the `client` folder.
-2. Run `ng serve` in the terminal.
-3. Open [https://localhost:4200](https://localhost:4200/)
 
 
