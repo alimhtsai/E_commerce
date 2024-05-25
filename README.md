@@ -41,6 +41,9 @@ info: Microsoft.Hosting.Lifetime[0]
 
 <b>Step 3. Start Docker to use Redis in-memory storage for the basket</b>
 1. Run `docker-compose up` in the terminal.
+2. Open [http://localhost:8081/](http://localhost:8081/) to access the Redis:
+   - username: `root`
+   - password: `secret`
 
 <b>Step 4. Start frontend</b>
 1. Go to the `client` folder.
