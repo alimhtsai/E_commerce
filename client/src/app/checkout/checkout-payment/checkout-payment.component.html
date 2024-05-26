@@ -1,4 +1,31 @@
-<div class="mt-4"></div>
+<div class="mt-4" *ngIf="checkoutForm" [formGroup]="checkoutForm">
+    <div class="row">
+        <div class="form-group col-12" formGroupName="paymentForm">
+            <app-text-input [label]="'Name on card'" formControlName="nameOnCard"></app-text-input>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-6">
+            <div class="form-floating">
+                <!-- put in a Stripe element -->
+                <div class="form-control" #cardNumber></div>
+                <label>Card Number</label>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-floating">
+                <div class="form-control" #cardExpiry></div>
+                <label>Card Expiry</label>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-floating">
+                <div class="form-control" #cardCvc></div>
+                <label>Card Cvc</label>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="d-flex justify-content-between flex-row mt-3 mb-4">
     <button class="btn btn-outline-primary" cdkStepperPrevious>
