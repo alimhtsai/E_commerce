@@ -58,15 +58,9 @@ info: Microsoft.Hosting.Lifetime[0]
 
 ```
 ..
-├── API                
+├── API
+
            ├── Controllers
-                              ├── AccountController.cs
-                              ├── BaseApiController.cs
-                              ├── BasketController.cs
-                              ├── BuggyController.cs
-                              ├── ErrorController.cs
-                              ├── OrdersController.cs
-                              ├── ProductsController.cs
            ├── Dtos
            ├── Errors
            ├── Extensions
@@ -77,54 +71,18 @@ info: Microsoft.Hosting.Lifetime[0]
            ├── appsettings.Development.json     # Use only for development stage
 
 ├── Core
+
            ├── Entities
-                              ├── Identity
-                                                      ├── Address.cs
-                                                      ├── AppUser.cs
-                              ├── OrderAggregate
-                                                      ├── Address.cs
-                                                      ├── DeliveryMethod.cs
-                                                      ├── Order.cs
-                                                      ├── OrderItem.cs
-                                                      ├── OrderStatus.cs
-                                                      ├── ProductItemOrdered.cs
-                              ├── BasketItem.cs
-                              ├── CustomerBasket.cs
-                              ├── Product.cs
-                              ├── ProductBrand.cs
-                              ├── ProductType.cs
-           ├── Interfaces
-                              ├── IBasketRepository.cs
-                              ├── IGenericRepository.cs
-                              ├── IOrderService.cs
-                              ├── IProductRepository.cs
-                              ├── ITokenService.cs
-                              ├── IUnitOfWork.cs
-           ├── Specifications
+           ├── Interfaces                       # The repository pattern
+           ├── Specifications                   # The specification pattern
 
 ├── Infrastructure
-           ├── Data
-                              ├── BasketRepository.cs
-                              ├── GenericRepository.cs
-                              ├── ProductRepository.cs
-                              ├── SpecificationEvaluator.cs
-                              ├── StoreContext.cs
-                              ├── StoreContextSeed.cs
-                              ├── UnitOfWork.cs
+
+           ├── Data                             # Store repository 
            ├── Identity
            ├── Services
-                              ├── OrderSercive.cs
-                              ├── TokenService.cs
 
-├── client
-           ├── src
-                              ├── app
-                                                      ├── account
-                                                      ├── basket
-                                                      ├── checkout
-                                                      ├── home
-                                                      ├── shared
-                                                      ├── shop
+├── client                                      # Client side
 ```
 
 
