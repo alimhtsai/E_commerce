@@ -15,26 +15,37 @@ export class ShopService {
   products: Product[] = [];
   brands: Brand[] = [];
   types: Type[] = [];
+  pagination?: Pagination<Product[]>;
+  shopParams = new ShopParams();
 
   constructor(private http: HttpClient) { }
 
-  getProducts(shopParams: ShopParams) {
+  getProducts() {
     let params = new HttpParams();
 
-    if (shopParams.brandId > 0) params = params.append('brandId', shopParams.brandId);
-    if (shopParams.typeId) params = params.append('typeId', shopParams.typeId);
-    params = params.append('sort', shopParams.sort);
-    params = params.append('pageIndex', shopParams.pageNumber);
-    params = params.append('pageSize', shopParams.pageSize);
+    if (this.shopParams.brandId > 0) params = params.append('brandId', this.shopParams.brandId);
+    if (this.shopParams.typeId) params = params.append('typeId', this.shopParams.typeId);
+    params = params.append('sort', this.shopParams.sort);
+    params = params.append('pageIndex', this.shopParams.pageNumber);
+    params = params.append('pageSize', this.shopParams.pageSize);
 
-    if (shopParams.search) params = params.append('search', shopParams.search);
+    if (this.shopParams.search) params = params.append('search', this.shopParams.search);
 
     return this.http.get<Pagination<Product[]>>(this.baseUrl + 'products', {params}).pipe(
       map(response => {
-        this.products = response.data;
+        this.products = [...this.products, ...response.data];
+        this.pagination = response;
         return response;
       })
     )
+  }
+
+  setShopParams(params: ShopParams) {
+    this.shopParams = params;
+  }
+
+  getShopParams() {
+    return this.shopParams;
   }
 
   getProduct(id: number) {
