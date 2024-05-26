@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-8">
-            <app-stepper [linearModeSelected]="false" #appStepper>
+            <app-stepper #appStepper>
                 <cdk-step [label]="'Address'" [completed]="checkoutForm.get('addressForm')?.valid">
                     <app-checkout-address [checkoutForm]="checkoutForm"></app-checkout-address>
                 </cdk-step>
@@ -11,7 +11,7 @@
                 <cdk-step [label]="'Review'">
                     <app-checkout-review [appStepper]="appStepper"></app-checkout-review>
                 </cdk-step>
-                <cdk-step [label]="'Payment'">
+                <cdk-step [label]="'Payment'" [completed]="checkoutForm.get('paymentForm')?.valid">
                     <app-checkout-payment [checkoutForm]="checkoutForm"></app-checkout-payment>
                 </cdk-step>
             </app-stepper>
