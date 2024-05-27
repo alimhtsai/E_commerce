@@ -1,20 +1,24 @@
 ## E-Commerce Shopping Website 
-> C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker
+> C#, TypeScript; .Net Core, ASP.NET, Angular, Bootstrap, REST; JWT; SQLite; Redis, Docker
+
+### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
 
 ### Introduction
 * Applied the repository, unit of work, and specification pattern in C#/ .NET Core backend to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
 * Used ASP.NET Identity and JWT for user registration and login
 * Built basket feature with Redis in-memory storage and Docker
 * Developed pagination, sorting, searching, and filtering features in frontend using TypeScript, Angular, and Bootstrap
+* Utilized Stripe and Webhooks to handle payments
+* Deployed the app to production through Linux
 
-### Live Demo
+### Demo
 From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/e2dbf0f5-f539-48b4-9fd6-07900b6a2fc1
+https://github.com/alimhtsai/E_commerce/assets/48788292/9ec515bc-d29e-448e-a7c2-4869db533903
 
-From basket to checkout, users can save a default address, choose their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket is automatically emptied. Users can also view specific orders or review all their previous orders.
+From basket to checkout, users can save a default address, select their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket is automatically emptied. Additionally, users can view specific orders or review their entire order history. For demonstration purposes, we use the test credit card provided by Stripe to simulate a successful order.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/a445c7d4-6394-4e3b-bf2a-aa608e404a77
+https://github.com/alimhtsai/E_commerce/assets/48788292/b2772caa-2c50-45fc-baf9-f24f2f55a033
 
 ----
 
@@ -23,10 +27,34 @@ https://github.com/alimhtsai/E_commerce/assets/48788292/a445c7d4-6394-4e3b-bf2a-
 
 `git clone https://github.com/alimhtsai/E_commerce.git`
 
-<b>Step 2. Start backend</b>
+<b>Step2. Create a Stripe developer account</b>
+1. Go to offical Stripe website to register for a developer account to use the payment feature: [https://dashboard.stripe.com/register](https://dashboard.stripe.com/register)
+
+<b>Step 3. Start backend</b>
 1. Go to the `API` folder.
-2. Run `dotnet watch` in the terminal.
-3. If the backend runs successfully, the terminal should show messages like this:
+2. Add a `appsettings.json` file in the `API` folder, and add the below content to it. Fill in your Stripe `PublishableKey` and `SecretKey`.
+```shell
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Information"
+    }
+  },
+  "StripeSettings": {
+    "PublishableKey": "Fill in your public key from Stripe developer tool",
+    "SecretKey": "Fill in your secret key from Stripe developer tool",
+    "WhSecret": "Fill in your webhook signing key"
+  },
+  "AllowedHosts": "*"
+}
+```
+4. Use [Stripe CLI](https://docs.stripe.com/stripe-cli#login-account) to test Webhooks functions.
+   * (1) Run `stripe login` in the terminal.
+   * (2) Run `stripe listen -f https://localhost:5001/api/payments/webhooks` to create a local listener. You will get a webhook signing key returned by this command. Pass the webhook signing key to the `WhSecret` in the `appsettings.json` file.
+
+5. Run `dotnet watch` in the terminal.
+6. If the backend runs successfully, the terminal should show messages like this:
 ```shell
 info: Microsoft.Hosting.Lifetime[14]
       Now listening on: https://localhost:5001
@@ -37,15 +65,18 @@ info: Microsoft.Hosting.Lifetime[0]
 info: Microsoft.Hosting.Lifetime[0]
       Content root path: .../skinet/API
 ```
-4. Open [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html) to see Swagger API.
+7. Use a list of test card provided by Stripe to test the payment function: [https://docs.stripe.com/testing#cards](https://docs.stripe.com/testing#cards)
+8. (Optional) open [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html) to see Swagger API.
 
-<b>Step 3. Start Docker to use Redis in-memory storage for the basket</b>
+<b>Step 4. Start Docker to use Redis in-memory storage for the basket</b>
 1. Run `docker-compose up` in the terminal.
-2. Open [http://localhost:8081/](http://localhost:8081/) to access the Redis:
+<!---
+3. Open [http://localhost:8081/](http://localhost:8081/) to access the Redis:
    - username: `root`
    - password: `secret`
+--->
 
-<b>Step 4. Start frontend</b>
+<b>Step 5. Start frontend</b>
 1. Go to the `client` folder.
 2. Run `ng serve` in the terminal.
 3. Open [https://localhost:4200](https://localhost:4200/)
@@ -84,5 +115,3 @@ info: Microsoft.Hosting.Lifetime[0]
 
 ├── client                                      # Client side
 ```
-
-
