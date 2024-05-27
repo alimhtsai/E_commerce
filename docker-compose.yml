@@ -18,6 +18,17 @@ services:
       - 8081:8081
     depends_on:
       - redis
+  
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: appuser
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/data
     
 volumes:
   redis-data:
+  postgres-data:
