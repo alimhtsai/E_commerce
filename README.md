@@ -78,8 +78,9 @@ info: Microsoft.Hosting.Lifetime[0]
 
 <b>Step 5. Start frontend</b>
 1. Go to the `client` folder.
-2. Run `ng serve` in the terminal.
-3. Open [https://localhost:4200](https://localhost:4200/)
+2. Run `npm install` to install dependencies if it's your first time running the project.
+3. Run `ng serve` in the terminal.
+4. Open [https://localhost:4200](https://localhost:4200/)
 
 ----
 
