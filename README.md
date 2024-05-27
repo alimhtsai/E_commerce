@@ -1,14 +1,22 @@
 ## E-Commerce Shopping Website 
 > C#, TypeScript; .Net Core, ASP.NET, Angular, Bootstrap, REST; JWT; SQLite; Redis, Docker
 
-### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
-
 ### Introduction
 * Applied the repository, unit of work and specification pattern in **.NET Core** to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
 * Built basket and caching with **Redis** and **Docker**; Used **ASP.NET** Identity and **JWT** for registration and login
 * Developed pagination, sorting, searching, and filtering features in frontend using **TypeScript**, **Angular**, and **Bootstrap**
 * Utilized **Stripe** Webhooks to handle payments; Deployed the app to production through **Linux Ubuntu**
 
+### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
+* Demo account:
+  * email: bob@test.com
+  * password: Pa$$w0rd
+* Demo test credit card:
+  * card number: 4242 4242 4242 4242
+  * card expiry: any future date
+  * card cvc: any three digits
+
+----
 
 ### Demo
 From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
