@@ -1,20 +1,24 @@
 ## E-Commerce Shopping Website 
-> C#, .Net Core, ASP.NET, JWT; REST; SQLite; TypeScript, Angular, Bootstrap; Redis, Docker
+> C#, TypeScript; .Net Core, ASP.NET, Angular, Bootstrap, REST; JWT; SQLite; Redis, Docker
+
+#### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
 
 ### Introduction
 * Applied the repository, unit of work, and specification pattern in C#/ .NET Core backend to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
 * Used ASP.NET Identity and JWT for user registration and login
 * Built basket feature with Redis in-memory storage and Docker
 * Developed pagination, sorting, searching, and filtering features in frontend using TypeScript, Angular, and Bootstrap
+* Utilized Stripe and Webhooks to handle payments
+* Deployed the app to production through Linux
 
 ### Live Demo
 From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/e2dbf0f5-f539-48b4-9fd6-07900b6a2fc1
+https://github.com/alimhtsai/E_commerce/assets/48788292/9ec515bc-d29e-448e-a7c2-4869db533903
 
-From basket to checkout, users can save a default address, choose their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket is automatically emptied. Users can also view specific orders or review all their previous orders.
+From basket to checkout, users can save a default address, select their preferred shipping method, review their order, and submit it. Once the order is submitted, the basket is automatically emptied. Additionally, users can view specific orders or review their entire order history. For demonstration purposes, we use the test credit card provided by Stripe to simulate a successful order.
 
-https://github.com/alimhtsai/E_commerce/assets/48788292/a445c7d4-6394-4e3b-bf2a-aa608e404a77
+https://github.com/alimhtsai/E_commerce/assets/48788292/b2772caa-2c50-45fc-baf9-f24f2f55a033
 
 ----
 
