@@ -4,12 +4,11 @@
 ### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
 
 ### Introduction
-* Applied the repository, unit of work, and specification pattern in C#/ .NET Core backend to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
-* Used ASP.NET Identity and JWT for user registration and login
-* Built basket feature with Redis in-memory storage and Docker
-* Developed pagination, sorting, searching, and filtering features in frontend using TypeScript, Angular, and Bootstrap
-* Utilized Stripe and Webhooks to handle payments
-* Deployed the app to production through Linux
+* Applied the repository, unit of work and specification pattern in **.NET Core** to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
+* Built basket and caching with **Redis** and **Docker**; Used **ASP.NET** Identity and **JWT** for registration and login
+* Developed pagination, sorting, searching, and filtering features in frontend using **TypeScript**, **Angular**, and **Bootstrap**
+* Utilized **Stripe** Webhooks to handle payments; Deployed the app to production through **Linux Ubuntu**
+
 
 ### Demo
 From shopping to basket, users can sort, search, and filter products. They can easily add items to their basket and update quantities as needed.
