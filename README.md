@@ -39,7 +39,7 @@ https://github.com/alimhtsai/E_commerce/assets/48788292/b2772caa-2c50-45fc-baf9-
 
 <b>Step 3. Start backend</b>
 1. Go to the `API` folder.
-2. Add a `appsettings.json` file in the `API` folder, and add the below content to it. Fill in your Stripe `PublishableKey` and `SecretKey`.
+2. Fill in your Stripe `PublishableKey` and `SecretKey` in the `appsettings.json` file.
 ```shell
 {
   "Logging": {
