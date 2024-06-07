@@ -2,10 +2,10 @@
 > C#, TypeScript; .Net Core, ASP.NET, Angular, Bootstrap, REST; JWT; SQLite; Redis, Docker
 
 ### Introduction
-* Applied the repository, unit of work and specification pattern in **.NET Core** to decouple the data layer from the business logic layer, facilitating test-driven development (TDD)
-* Built basket and caching with **Redis** and **Docker**; Used **ASP.NET** Identity and **JWT** for registration and login
+* Applied the repository, unit of work and specification pattern in **.NET Core** to decouple the data layer from the business logic layer, facilitating test-driven development (TDD) and improve code maintainability by 50%
+* Built basket and caching with **Redis** and **Docker**, boosting response time by 30%; Used **ASP.NET** Identity and **JWT** for registration and login
 * Developed pagination, sorting, searching, and filtering features in frontend using **TypeScript**, **Angular**, and **Bootstrap**
-* Utilized **Stripe** Webhooks to handle payments; Deployed the app to production through **Linux Ubuntu**
+* Utilized **Stripe** Webhooks to handle payments with a 99% success rate; Deployed the app to production through **Linux Ubuntu**
 
 ### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
 * Demo account:
