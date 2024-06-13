@@ -7,7 +7,7 @@
 * Developed pagination, sorting, searching, and filtering features in frontend using **TypeScript**, **Angular**, and **Bootstrap**
 * Utilized **Stripe** Webhooks to handle payments with a 99% success rate; Deployed the app to production through **Linux Ubuntu**
 
-### Live Demo Website: [http://146.190.37.229/](http://146.190.37.229/)
+### Live Demo Website -> [http://143.198.75.149](http://143.198.75.149)
 * Demo account:
   * email: bob@test.com
   * password: Pa$$w0rd
