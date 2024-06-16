@@ -3,7 +3,7 @@
 
 ### Introduction
 * Applied the repository, unit of work and specification pattern in **.NET Core** to decouple the data layer from the business logic layer, facilitating test-driven development (TDD) and improve code maintainability by 50%
-* Built basket and caching with **Redis** and **Docker**, boosting response time by 30%; Used **ASP.NET** Identity and **JWT** for registration and login
+* Built basket and caching with **Redis** and **Docker**, boosting response time by 30%; Used **ASP.NET** Identity and **JWT** for user authentication
 * Developed pagination, sorting, searching, and filtering features in frontend using **TypeScript**, **Angular**, and **Bootstrap**
 * Utilized **Stripe** Webhooks to handle payments with a 99% success rate; Deployed the app to production through **Linux Ubuntu**
 
@@ -109,13 +109,13 @@ info: Microsoft.Hosting.Lifetime[0]
            ├── program.cs                       # Entry point of the back-end application
            ├── appsettings.Development.json     # Use only for development stage
 
-├── Core
+├── Core                                        # Business logic
 
            ├── Entities
            ├── Interfaces                       # The repository pattern
            ├── Specifications                   # The specification pattern
 
-├── Infrastructure
+├── Infrastructure                              # Connect with database
 
            ├── Data                             # Store repository 
            ├── Identity
