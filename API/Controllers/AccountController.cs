@@ -25,7 +25,7 @@ namespace API.Controllers
             _tokenService = tokenService;
             _mapper = mapper;
         }
-
+        // Added comment
         [Authorize]
         [HttpGet]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
